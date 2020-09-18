@@ -45,4 +45,26 @@
   <xacro:property name="torso_imu_pitch_offset" value="0.0" />
   <xacro:property name="torso_imu_yaw_offset" value="0.0" />
 
+  <xacro:macro name="joint_offset" params="which id">
+    <xacro:if value="${which == 'arm_left'}">
+      <xacro:if value="${id == 1}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 2}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 3}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 4}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 5}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 6}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 7}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+    </xacro:if>
+
+    <xacro:if value="${which == 'arm_right'}">
+      <xacro:if value="${id == 1}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 2}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 3}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 4}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 5}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 6}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+      <xacro:if value="${id == 7}"> <origin xyz="0 0 0" rpy="0 0 0"/> </xacro:if>
+    </xacro:if>
+  </xacro:macro>
+
 </robot>

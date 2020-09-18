@@ -34,6 +34,11 @@
     <!--************************-->
     <!--        SHOULDER        -->
     <!--************************-->
+    <xacro:calibration_joint name="${name}_${side}_1" parent="${parent}">
+      <origin xyz="0.00000 ${0.15750*reflect} 0.23200"
+              rpy="${0.0 * deg_to_rad} ${0.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
+    </xacro:calibration_joint>
+
     <link name="${name}_${side}_1_link">
       <xacro:call macro="${name}_${side}_1_link_inertial" />
 
@@ -54,10 +59,9 @@
     </link>
 
     <joint name="${name}_${side}_1_joint" type="revolute">
-      <parent link="${parent}" />
+      <parent link="${name}_${side}_1_calibration_link" />
       <child link="${name}_${side}_1_link" />
-      <origin xyz="0.00000 ${0.15750*reflect} 0.23200"
-              rpy="${0.0 * deg_to_rad} ${0.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
+      <xacro:joint_offset which="${name}_${side}" id="1"/>
       <axis xyz="0 0 1" />
 
       <xacro:arm_1_joint_limits reflect="${reflect}" />
