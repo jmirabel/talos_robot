@@ -1,62 +1,53 @@
-<?xml version="1.0"?>
-<!--
-
-  Copyright (c) 2015, PAL Robotics, S.L.
-  All rights reserved.
-
-  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
-  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
-  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
--->
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This file was generated automatically by package talos_calibration. -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-
-  <xacro:property name="arm_1_joint_x_offset"     value="0.0" />
-  <xacro:property name="arm_1_joint_y_offset"     value="0.0" />
-  <xacro:property name="arm_1_joint_z_offset"     value="0.0" />
-  <xacro:property name="arm_1_joint_roll_offset"  value="0.0" />
-  <xacro:property name="arm_1_joint_pitch_offset" value="0.0" />
-  <xacro:property name="arm_1_joint_yaw_offset"   value="0.0" />
-
-  <xacro:property name="arm_2_joint_x_offset"     value="0.0" />
-  <xacro:property name="arm_2_joint_y_offset"     value="0.0" />
-  <xacro:property name="arm_2_joint_z_offset"     value="0.0" />
-  <xacro:property name="arm_2_joint_roll_offset"  value="0.0" />
-  <xacro:property name="arm_2_joint_pitch_offset" value="0.0" />
-  <xacro:property name="arm_2_joint_yaw_offset"   value="0.0" />
-
-  <xacro:property name="arm_3_joint_x_offset"     value="0.0" />
-  <xacro:property name="arm_3_joint_y_offset"     value="0.0" />
-  <xacro:property name="arm_3_joint_z_offset"     value="0.0" />
-  <xacro:property name="arm_3_joint_roll_offset"  value="0.0" />
-  <xacro:property name="arm_3_joint_pitch_offset" value="0.0" />
-  <xacro:property name="arm_3_joint_yaw_offset"   value="0.0" />
-
-  <xacro:property name="arm_4_joint_x_offset"     value="0.0" />
-  <xacro:property name="arm_4_joint_y_offset"     value="0.0" />
-  <xacro:property name="arm_4_joint_z_offset"     value="0.0" />
-  <xacro:property name="arm_4_joint_roll_offset"  value="0.0" />
-  <xacro:property name="arm_4_joint_pitch_offset" value="0.0" />
-  <xacro:property name="arm_4_joint_yaw_offset"   value="0.0" />
-
-  <xacro:property name="arm_5_joint_x_offset"     value="0.0" />
-  <xacro:property name="arm_5_joint_y_offset"     value="0.0" />
-  <xacro:property name="arm_5_joint_z_offset"     value="0.0" />
-  <xacro:property name="arm_5_joint_roll_offset"  value="0.0" />
-  <xacro:property name="arm_5_joint_pitch_offset" value="0.0" />
-  <xacro:property name="arm_5_joint_yaw_offset"   value="0.0" />
-
-  <xacro:property name="arm_6_joint_x_offset"     value="0.0" />
-  <xacro:property name="arm_6_joint_y_offset"     value="0.0" />
-  <xacro:property name="arm_6_joint_z_offset"     value="0.0" />
-  <xacro:property name="arm_6_joint_roll_offset"  value="0.0" />
-  <xacro:property name="arm_6_joint_pitch_offset" value="0.0" />
-  <xacro:property name="arm_6_joint_yaw_offset"   value="0.0" />
-
-  <xacro:property name="arm_7_joint_x_offset"     value="0.0" />
-  <xacro:property name="arm_7_joint_y_offset"     value="0.0" />
-  <xacro:property name="arm_7_joint_z_offset"     value="0.0" />
-  <xacro:property name="arm_7_joint_roll_offset"  value="0.0" />
-  <xacro:property name="arm_7_joint_pitch_offset" value="0.0" />
-  <xacro:property name="arm_7_joint_yaw_offset"   value="0.0" />
-
+  <!--
+    Offsets in this file are such that `CAO + offset = reality`.
+    Unless stated otherwise, angles are in radians.
+    -->
+  <!--File includes-->
+  <xacro:include filename="$(find talos_description_calibration)/urdf/deg_to_rad.xacro"/>
+  <!--Constant parameters-->
+  <xacro:property name="arm_left_1_joint_x_offset" value="1.763e-05"/>
+  <xacro:property name="arm_left_1_joint_y_offset" value="-0.0014705"/>
+  <xacro:property name="arm_left_1_joint_z_offset" value="0.0013202"/>
+  <xacro:property name="arm_left_1_joint_yaw_offset" value="-0.0012607"/>
+  <xacro:property name="arm_left_1_joint_pitch_offset" value="0.0086499"/>
+  <xacro:property name="arm_left_1_joint_roll_offset" value="-0.022558"/>
+  <xacro:property name="arm_left_2_joint_x_offset" value="-0.0035031"/>
+  <xacro:property name="arm_left_2_joint_y_offset" value="-0.0014641"/>
+  <xacro:property name="arm_left_2_joint_z_offset" value="0.0024729"/>
+  <xacro:property name="arm_left_2_joint_yaw_offset" value="-0.022125"/>
+  <xacro:property name="arm_left_2_joint_pitch_offset" value="0.0086501"/>
+  <xacro:property name="arm_left_2_joint_roll_offset" value="-0.022667"/>
+  <xacro:property name="arm_left_3_joint_x_offset" value="-0.0034806"/>
+  <xacro:property name="arm_left_3_joint_y_offset" value="-0.0015782"/>
+  <xacro:property name="arm_left_3_joint_z_offset" value="0.00056011"/>
+  <xacro:property name="arm_left_3_joint_yaw_offset" value="-0.022255"/>
+  <xacro:property name="arm_left_3_joint_pitch_offset" value="0.010112"/>
+  <xacro:property name="arm_left_3_joint_roll_offset" value="-0.010015"/>
+  <xacro:property name="arm_left_4_joint_x_offset" value="-0.0014512"/>
+  <xacro:property name="arm_left_4_joint_y_offset" value="0.004296"/>
+  <xacro:property name="arm_left_4_joint_z_offset" value="0.00082743"/>
+  <xacro:property name="arm_left_4_joint_yaw_offset" value="-0.022949"/>
+  <xacro:property name="arm_left_4_joint_pitch_offset" value="0.003591"/>
+  <xacro:property name="arm_left_4_joint_roll_offset" value="-0.010165"/>
+  <xacro:property name="arm_left_5_joint_x_offset" value="-0.0021549"/>
+  <xacro:property name="arm_left_5_joint_y_offset" value="0.010119"/>
+  <xacro:property name="arm_left_5_joint_z_offset" value="0.0028305"/>
+  <xacro:property name="arm_left_5_joint_yaw_offset" value="-0.023012"/>
+  <xacro:property name="arm_left_5_joint_pitch_offset" value="0.0035377"/>
+  <xacro:property name="arm_left_5_joint_roll_offset" value="-0.0078481"/>
+  <xacro:property name="arm_left_6_joint_x_offset" value="-0.00072238"/>
+  <xacro:property name="arm_left_6_joint_y_offset" value="0.010535"/>
+  <xacro:property name="arm_left_6_joint_z_offset" value="0.0028454"/>
+  <xacro:property name="arm_left_6_joint_yaw_offset" value="-0.020495"/>
+  <xacro:property name="arm_left_6_joint_pitch_offset" value="0.0038764"/>
+  <xacro:property name="arm_left_6_joint_roll_offset" value="-0.0078403"/>
+  <xacro:property name="arm_left_7_joint_x_offset" value="-0.00071354"/>
+  <xacro:property name="arm_left_7_joint_y_offset" value="0.010584"/>
+  <xacro:property name="arm_left_7_joint_z_offset" value="0.00046582"/>
+  <xacro:property name="arm_left_7_joint_yaw_offset" value="-0.020494"/>
+  <xacro:property name="arm_left_7_joint_pitch_offset" value="0.0038818"/>
+  <xacro:property name="arm_left_7_joint_roll_offset" value="-0.0081044"/>
 </robot>
